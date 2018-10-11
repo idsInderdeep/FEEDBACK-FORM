@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>NIELIT Sign in</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+         
+        <style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+    margin :auto;
+    width:40%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+</style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="w3.css">
+    </head>
+    <body>
+         
+        <!-- HEADER -->
+        <div class="header">
+            <h4><b>National Institute of Electronics & Information Technology</b></h4>
+        </div>
+          <marquee width="100%" direction="right" style="font-family:platino" >
+         Developed by - <i>Inderdeep Singh</i>  
+        </marquee>
+              
+        
+<div class="card" style="margin-top:1px;height:65%;width:70%;padding-top: 5px">
+  <h3 style="color:rgb(255, 62, 27);padding: 1%;">Student Feedback Form</h3>       
+ 
+  <form action="signin.jsp" style="text-align: center" id="for" method="post" onsubmit="return valid()" name="myForm" >    
+
+    <table id="customers"  >
+
+
+ <th  colspan="2" style="text-align: center">Enter Teacher ID</th>
+  </tr>
+  <tr>
+      <td colspan="2"><input type="text" name="tid" required></td>
+  </tr>    
+   
+  <tr>
+    <th  colspan="2" style="text-align: center">Enter Name</th>
+  </tr>
+  <tr >
+      <td colspan="2"><input type="text" name="name" required></td>
+  </tr>    
+ 
+   <tr>
+    <th  colspan="2" style="text-align: center">Enter Password</th>
+  </tr>
+  <tr >
+      <td colspan="2"><input type="password" name="psw" required></td>
+  </tr>    
+ 
+  
+  <tr>
+ <th  colspan="2" style="text-align: center">Confirm password</th>
+  </tr>
+  <tr>
+      <td><input type="password" name="cpsw" required></td>
+  </tr>  
+
+</table>
+    <button style="padding:3px" class="w3-btn w3-yellow w3-border w3-border-green w3-round-large">CREATE</button>
+</form>   
+
+  <a href="index.html" class="w3-button w3-circle w3-teal">back</a>
+</div>
+             <!-- FOOTER -->
+     <footer>
+       <p style="font-family:platino;font-size:10px;padding-top:40px;padding-left:155px;">PROJECT BY : <i>Inderdeep Singh</i></p> 
+     </footer>
+     
+        
+        <script>
+            function valid()
+            {
+                var x = document.forms["myForm"]["psw"].value;
+                var y = document.forms["myForm"]["cpsw"].value;
+                
+                if(x!=y)
+                {
+                    alert("WRONG CONFIRMATION OF PASSWORD");
+                    return(false);
+                }
+                else
+                {
+                    return(true);
+                }
+            }
+            
+        </script>    
+ 
+    </body>
+    
+</html>
+

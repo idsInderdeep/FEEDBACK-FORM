@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>NIELIT FEEDBACK</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+         
+        <style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+    margin :auto;
+    width:40%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+tr
+{
+    text-align: center;
+}
+
+</style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="w3.css">
+
+    </head>
+    <body>
+         
+        <!-- HEADER -->
+        <div class="header">
+            <h4>National Institute of Electronics & Information Technology</h4>
+        </div>
+    
+        <marquee width="100%" direction="right" style="font-family:platino" >
+         Developed by - <i>Inderdeep Singh</i>  
+        </marquee>
+                
+        
+<div class="card" style="margin-top:1px;height:60%;width:70%;marin-top:3%">
+ 
+    <h3 style="color:rgb(255, 62, 27);padding: 1%;">  Student Feedback Form</h3>       
+<table id="customers">
+  <tr>
+    <th>GIVE FEEDBACK </th>
+    <th>CHECK YOUR FEEDBACK</th>
+    <th>Teacher Sign in</th>
+  </tr>
+  <tr>
+      <td><button onclick="pop()" style="text-decoration: none;color:black" class="w3-btn w3-yellow w3-border w3-border-red w3-round-large" >GO</button></td>
+      <td><button onclick="show()" class="w3-btn w3-red w3-border w3-border-green w3-round-large">CLICK</button></td>
+      <td><button onclick="sign()" class="w3-btn w3-blue w3-border w3-border-yellow w3-round-large">SIGN</button></td>
+  </tr>
+
+</table>
+ 
+    <form action="detail.jsp" style="display: none;text-align: center" id="for" method="post">    
+<table id="customers" >
+
+  <tr>
+    <th  colspan="2">Enter Name</th>
+  </tr>
+  <tr >
+      <td colspan="2"><input type="text" name="name" required></td>
+  </tr>    
+    
+  <tr>
+    <th  colspan="2">Enter password</th>
+  </tr>
+  <tr>
+      <td><input type="password" name="psw" required></td>
+  </tr>  
+  
+  <tr>
+        <td><button class="w3-btn w3-border-cyan w3-border w3-border-brown w3-round-large">SHOW</button></td>
+  </tr>    
+
+</table>
+</form>   
+ 
+</div>
+ 
+        <script>
+            function pop()
+            {
+              window.open("newjsp.jsp","_self");  
+            }
+            
+            function show()
+            {
+                document.getElementById("for").style.display="inline";
+            }
+            function sign()
+            {
+              window.open("newfile.html","_self");  
+            }
+        </script>    
+       
+    </body>
+    
+</html>
